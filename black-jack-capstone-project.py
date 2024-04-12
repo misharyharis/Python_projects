@@ -1,4 +1,8 @@
 import random 
+from sys import stdout
+
+
+
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 def deal_card():
   card=random.choice(cards)
@@ -65,3 +69,7 @@ while computer_score!=0 and computer_score<17:
 print(f"  your final card: {user_cards}, final score: {user_score}")
 print(f"  computer final card: {computer_cards}, final score: {computer_score}")
 print(compare(user_score,computer_score))
+
+play_again = input('do yoy want to play game black jack type "y" or "n"')
+if play_again == 'y':
+  stdout.write('\x1b[H\x1b[2J')
